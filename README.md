@@ -1,4 +1,5 @@
 OWHShadomanMe
 =============
 
-Shadoman75's version of the infamous OWHMe plugin.
+The /me and /my plugin, rewritten by Raniy, doing Shadoman's homework for him... :P
+
