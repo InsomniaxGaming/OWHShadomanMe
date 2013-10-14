@@ -1,0 +1,21 @@
+author: Raniy, 10102, Shadoman75
+database: false
+description: "Provides an easy to use method for players to emote, and staff/moderators to emote as EVERYONE."
+main: info.insomniax.bukkit.owhshadomanme.OWHShadomanMe
+name: OWHShadomanMe
+startup: postworld
+version: 0.0.1
+depend: [Vault]
+commands:
+    me:
+        description: "Emote the string"
+        usage: "/me <string>"
+    meall:
+        description: "Emote the string as EVERY player..."
+        usage: "/meall <string>"
+    my:
+        description: "Emote the string possesively"
+        usage: "/me <string>"
+    myall:
+        description: "Emote the string possesively as EVERY player..."
+        usage: "/meall <string>"
