@@ -73,7 +73,7 @@ public class MyHandler implements CommandExecutor {
 		// Assemble strings for every player online, and send them to everyone.
 		for(Player p:this.myPlugin.getServer().getOnlinePlayers())
 		{
-			this.myPlugin.sendToAll(p.getName() + StringUtils.join(args," "));
+			this.myPlugin.sendToAll(p.getName() + "'s " + StringUtils.join(args," "));
 		}
 	}
 	
@@ -84,15 +84,14 @@ public class MyHandler implements CommandExecutor {
 		{
 			// Emotes Globally!
 			// Assemble the string for the name, and send it to ... Everyone.
-			this.myPlugin.sendToAll(name + StringUtils.join(args, " "));
+			this.myPlugin.sendToAll(name + "'s " + StringUtils.join(args, " "));
 		} else {
 			// Emotes Locally!
-			
 			// 	Assemble the string for the name, and send it to players in the world with the player the name belongs to.
 			for(Player p:this.myPlugin.getServer().getPlayerExact(name).getWorld().getPlayers())
 			{
 				//	For each player in the world with the player;
-				this.myPlugin.sendToPlayer(p.getName(), name + StringUtils.join(args," "));
+				this.myPlugin.sendToPlayer(p.getName(), name + "'s " + StringUtils.join(args," "));
 			}
 		}
 		
