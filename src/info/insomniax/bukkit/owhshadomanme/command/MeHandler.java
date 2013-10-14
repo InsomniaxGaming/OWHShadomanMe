@@ -32,6 +32,7 @@ public class MeHandler implements CommandExecutor {
 					// Permed
 					// Assemble the emote for EVERY player on the server. And send it globally.
 					meAll(args);
+					return true;
 					
 				} else {
 					// Not Permed.
@@ -39,19 +40,24 @@ public class MeHandler implements CommandExecutor {
 					return true;
 				}
 			} 
+			
 		}
 		
 		// my
 		if(cmd.toString().equalsIgnoreCase("me"))
 		{
 			// Tell the Console to get lost. Consoles cant emote.
-			if(sender instanceof ConsoleCommandSender) sender.sendMessage("Consoles cant emote. End of Line.");
+			if(sender instanceof ConsoleCommandSender) {
+				sender.sendMessage("Consoles cant emote. End of Line.");
+				return true;
+			}
 			
 			// Check Perms
 			if(this.myPlugin.playerHasNode(sender.getName(), this.myPlugin.myMeNode.getMyNode()))
 			{
 				// Permed.
 				me(sender.getName(), args);
+				return true;
 			} else {
 				// Not Permed.
 				sender.sendMessage(this.myPlugin.myErrorMSG);
