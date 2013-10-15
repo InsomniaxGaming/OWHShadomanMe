@@ -39,7 +39,11 @@ public class MeHandler implements CommandExecutor {
 			   		sender.sendMessage(this.myPlugin.myErrorMSG);
 					return true;
 				}
-			} 
+			} else {
+				// Console == DO EET!
+				meAll(args);
+				return true;
+			}
 			
 		}
 		

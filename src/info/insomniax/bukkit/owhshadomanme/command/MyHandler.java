@@ -39,7 +39,11 @@ public class MyHandler implements CommandExecutor {
 					sender.sendMessage(this.myPlugin.myErrorMSG);
 					return true;
 				}
-			} 
+			} else {
+				// Console, do eet.
+				myAll(args);
+				return true;
+			}
 		}
 		
 		// my
